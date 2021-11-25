@@ -19,3 +19,5 @@ for i in range(n):
                 continue
 
 print(result)
+
+##테스트 성공##
