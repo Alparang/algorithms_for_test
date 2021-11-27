@@ -1,13 +1,13 @@
 n = int(input())
 m = list(map(int, input().split()))
 
-sorted_m = sorted(m, reverse=True)
 
-for i in len(sorted_m):
-    if(i == len(sorted_m)):
-        print(-1)
+for i in range(len(m)-1, -1, -1):
+    if(i == 0): # 마지막 순열 일 시
+        print("-1")
+        break
     else:
-        if(sorted_m[i] > sorted_m[i+1]):
-            sorted_m[i], sorted_m[i+1] = sorted_m[i+1],sorted_m[i]
-            print(sorted_m)
+        if(m[i-1] < m[i]):
+            m[i-1], m[i] = m[i], m[i-1] # 뒷자리 수 두 개 바꾸기
+            print(' '.join(map(str, m)))
             break
