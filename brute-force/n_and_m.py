@@ -9,7 +9,7 @@ def solve(depth, n, m):
     for i in range(len(visited)):
         if visited[i] == False:
             visited[i] = True
-            result.append(i+1)
+            result.append(i + 1)
             solve(depth + 1, n, m) #dfs
             visited[i] = False
             result.pop()
